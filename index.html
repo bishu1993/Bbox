@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="Bbox.js" type="text/javascript"></script>
+        <link href="Bbox.css" rel="stylesheet" type="text/css"/>
+        <style>
+            /* Demo Styles */
+            body{
+                height: 1800px;
+            }
+            #content
+            {
+                display: none;
+            }
+
+            .trigger-button
+            {
+                font-size: 17px;
+
+                position: relative;
+                top: 100px;
+
+                display: block;
+
+                margin: auto;
+                padding: 10px 30px;
+
+                cursor: pointer;
+
+                color: #fff;
+                border: 0;
+                border-radius: 3px;
+                outline: none;
+                background: #3498db;
+                box-shadow: 0 5px 1px #196090;
+            }
+
+            .trigger-button:hover
+            {
+                background: #196090;
+                box-shadow: 0 5px 1px #0a2639;
+            }
+
+            .trigger-button:active
+            {
+                border-top: 5px solid white;
+                box-shadow: none;
+            }
+            .title{
+                margin-top: -15px;
+            }
+        </style>
+    </head>
+    <body>
+
+
+        <button id="trigger" class="trigger-button" type="button">Launch Modal</button>
+
+        <div id="content">
+            <h1>Look at me!</h1>
+            <p>I'm a modal window.</p>
+            <p>I'm a modal window.</p>
+            <p>I'm a modal window.</p>
+            <p>I'm a modal window.</p>
+            <p>I'm a modal window.</p>
+            
+        </div>
+
+
+        <script>
+            var myContent = document.getElementById('content');
+            
+            var myModal = new Bbox({
+                title : 'My Modal',
+                content: myContent,
+                className: 'zoom-and-spin',
+                closeButton : true,
+                closeButtonIcon : "cancel.png",
+                hideOnOverlayClick : true,
+                overlayOpacity : '.8',
+                overlayColor : 'lightgreen',
+                size : "medium"
+                
+            });
+
+            var triggerButton = document.getElementById('trigger');
+
+            triggerButton.addEventListener('click', function () {
+                myModal.open();
+            });
+
+        </script>
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+    </body>
+</html>
