@@ -1,5 +1,5 @@
 # Bbox
-Bbox Modal Box Plugin
+Bbox Modal Box Plugin v1.1.0
 
 
 ###installation###
